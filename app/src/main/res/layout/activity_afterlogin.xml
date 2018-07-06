@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dellpc.slack.afterlogin">
+
+    <TextView
+        android:id="@+id/ptitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="User Details"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="41dp" />
+
+
+
+    <TextView
+        android:id="@+id/pname"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_below="@id/ptitle"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <TextView
+        android:id="@+id/pmailid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mail id"
+        android:textStyle="italic"
+        android:layout_below="@id/pname"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <TextView
+        android:id="@+id/pbldgrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blood Group"
+        android:textStyle="italic"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/pmailid"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="188dp" />
+
+    <TextView
+        android:id="@+id/pcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        android:textStyle="italic"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:layout_below="@id/pbldgrp"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="243dp" />
+    <TextView
+        android:id="@+id/pverify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/pcontact"
+        android:layout_marginTop="15dp"
+        android:text="Email Address is not Verified"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="322dp" />
+
+</RelativeLayout>
