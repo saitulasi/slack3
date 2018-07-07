@@ -4,7 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_linear_layout"
+    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+
     tools:context="com.example.dellpc.slack.start">
+    <Button
+        android:id="@+id/hospital"
+        android:foregroundGravity="clip_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="182dp"
+        android:background="@drawable/curved_button"
+
+        android:text="Hospital" />
+
 
     <Button
         android:id="@+id/donor"
@@ -14,16 +30,10 @@
         android:layout_alignBottom="@+id/hospital"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="43dp"
-        android:text="Donor" />
+        android:background="@drawable/curved_button"
 
-    <Button
-        android:id="@+id/hospital"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="182dp"
-        android:text="Hospital" />
+        android:text="Donor"
+        android:foregroundGravity="clip_horizontal"/>
+
 
 </RelativeLayout>

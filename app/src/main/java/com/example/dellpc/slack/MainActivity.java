@@ -1,5 +1,6 @@
 package com.example.dellpc.slack;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         views();
         firebaseAuth=FirebaseAuth.getInstance();
+        final ProgressDialog progressDialog = new ProgressDialog(this);
         signupbtn.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -63,6 +65,8 @@ public class MainActivity extends AppCompatActivity
                     {
                         String user_email = emailid.getText().toString().trim();
                         String user_pass = password.getText().toString().trim();
+                        progressDialog.setMessage("Please wait");
+                        progressDialog.show();
                         firebaseAuth.createUserWithEmailAndPassword(user_email, user_pass).addOnCompleteListener(
                                 new OnCompleteListener<AuthResult>()
                                 {

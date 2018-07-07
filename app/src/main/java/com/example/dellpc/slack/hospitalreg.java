@@ -1,5 +1,6 @@
 package com.example.dellpc.slack;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class hospitalreg extends AppCompatActivity {
     String MobilePattern = "[0-9]{10}";
     String grppattern="(A|B|AB|O)[-+]";
     private FirebaseAuth firebaseAuth;
+     ProgressDialog progressDialog=new ProgressDialog(this);
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +65,8 @@ public class hospitalreg extends AppCompatActivity {
 
                     String user_email=emailid.getText().toString().trim();
                     String user_pass=password.getText().toString().trim();
+                        progressDialog.setMessage("Please wait");
+                        progressDialog.show();
                     firebaseAuth.createUserWithEmailAndPassword(user_email,user_pass).addOnCompleteListener(
                             new OnCompleteListener<AuthResult>()
                             {

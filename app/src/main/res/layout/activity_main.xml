@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_linear_layout"
+    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
     tools:context="com.example.dellpc.slack.MainActivity">
     <ScrollView
         android:id="@+id/sv"
@@ -31,30 +33,70 @@
                 android:textColorHighlight="@color/colorPrimary"
                 android:textSize="30dp"
                 android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/name"
+            <FrameLayout
+                android:id="@+id/user_sign_up_frame_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/pass"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:hint="Name"
-                android:inputType="textPersonName"
-                android:textAlignment="center" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp">
 
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/icon_new_user" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/pass"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7dp"
+                    android:ems="10"
+                    android:hint="Name"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/user_sign_up_frame_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/icon_email" />
             <EditText
                 android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/name"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
                 android:ems="10"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:textAlignment="center" />
+
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/user_sign_up_frame_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp">
+                <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/password" />
 
             <EditText
                 android:id="@+id/pass"
@@ -62,22 +104,53 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="numberPassword"
                 android:textAlignment="center" />
 
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/user_sign_up_frame_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/icon_mobile" />
             <EditText
                 android:id="@+id/phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/pass"
+                android:layout_marginStart="10dp"
                 android:layout_marginLeft="80dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="7dp"
                 android:ems="10"
                 android:hint="Contact"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/user_sign_up_frame_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/icon_address" />
 
             <EditText
                 android:id="@+id/address"
@@ -85,11 +158,28 @@
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/phone"
                 android:layout_marginLeft="80dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="10dp"
                 android:ems="10"
                 android:hint="Address"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/user_sign_up_spinner_blood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/icon_blood"
+                />
+
 
             <EditText
                 android:id="@+id/blood"
@@ -99,10 +189,23 @@
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
+                android:layout_marginStart="10dp"
                 android:hint="Blood Group"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
-
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/user_sign_up_dod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/icon_syringe" />
             <EditText
                 android:id="@+id/last"
                 android:layout_width="wrap_content"
@@ -110,10 +213,12 @@
                 android:layout_alignStart="@+id/blood"
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
                 android:ems="10"
                 android:hint="Last Donated"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
+            </FrameLayout>
 
             <Button
                 android:id="@+id/signup"
@@ -122,6 +227,8 @@
                 android:layout_alignEnd="@+id/last"
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/curved_button"
+
                 android:text="Register" />
 
             <Button
@@ -129,6 +236,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/signup"
+                android:background="@drawable/curved_button"
+
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="10dp"
                 android:text="Signin" />
